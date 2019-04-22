@@ -13,11 +13,11 @@ public class Mixer {
 	private URL url;
 	private BufferedReader reader;
 	private boolean online = false;
-	//private String channel2;
+	private String channel2;
 
 	  public Mixer(String channel, String[] args) {
 	    this.channel = channel;
-	    //this.channel2 = channel2;
+	    this.channel2 = channel2;
 	    refresh();
 	  }
 	  public void refresh() {
