@@ -5,13 +5,13 @@ import java.net.URI;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/*import java.io.BufferedReader;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
-import java.nio.charset.Charset;*/
+import java.nio.charset.Charset;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -20,8 +20,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-//import me.chisdealhd.customplugin.Hypixel;
-//import org.json.simple.JSONObject;
+import me.chisdealhd.customplugin.Hypixel;
+import org.json.simple.JSONObject;
 
 import ca.momoperes.canarywebhooks.DiscordMessage;
 import ca.momoperes.canarywebhooks.WebhookClient;
@@ -42,18 +42,18 @@ public class ChisdealHDPlugin extends JavaPlugin implements Listener {
 		    System.out.println(json.get("radioname"));
 		  }
 			  
-	/*public void update() {
+	public void update() {
 	    if (UpdateChecker.checkUpdate(53045, 1.2)) {
 	    	Bukkit.getServer().getLogger().info(ChatColor.GREEN +"There is a UPDATE! Please Install Newest Version");
     	} else {
         	Bukkit.getServer().getLogger().info(ChatColor.RED +"There is no Update, Update UP TO DATE!");
 		}
-	}*/
+	}
 	
 	@Override
 	public void onEnable() {
 		Bukkit.getServer().getLogger().info("Plugin is Working!");
-		//update();
+		update();
 		try {
 			main(null);
 		} catch (IOException e) {
