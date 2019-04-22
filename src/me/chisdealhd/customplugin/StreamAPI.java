@@ -9,21 +9,21 @@ import java.net.URL;
 public class StreamAPI
 {
   private String channel;
-  //private String twitchapi;
-  //private URL twitchapiurl;
+  private String twitchapi;
+  private URL twitchapiurl;
   private URL url;
   private BufferedReader reader;
   private boolean online = false;
-  //private String channel2;
+  private String channel2;
 
   public StreamAPI(String channel, String[] args) {
     this.channel = channel;
-    //this.channel2 = channel2;
+    this.channel2 = channel2;
     refresh();
   }
   public void refresh() {
     try {
-      //this.twitchapiurl = new URL("");
+      this.twitchapiurl = new URL("");
       this.url = new URL("https://api.twitch.tv/kraken/streams?channel=" + this.channel+"&client_id=uhfsjnruyn6vsu01yhk346jhccv5v7");
       this.reader = new BufferedReader(new InputStreamReader(this.url.openStream()));
       if (!this.reader.readLine().contains("[]"))
